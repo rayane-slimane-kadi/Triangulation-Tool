@@ -8,12 +8,43 @@
     <!-- Additional meta tags, stylesheets, and scripts can be included here -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="466534754430-ev15coli1j97cqhfas1ene48lodpvgck.apps.googleusercontent.com">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <script src="script.js"></script>
     <p>NOegeggi</p>
+
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="units.html">Units</a></li>
+          <li><a href="expectations.html">Expectations</a></li>
+        </ul>
+    </nav>
+
+    <!-- Element to display user's name -->
+    <!-- <div id="user-name"></div>
+    <script>
+        function onSignIn(googleUser) {
+            // Get user profile information
+            var profile = googleUser.getBasicProfile();
+
+            // Display the user's name on your website
+            var userName = profile.getName();
+            document.getElementById('user-name').innerHTML = 'Welcome, ' + userName + '!';
+        }
+    </script> -->
+
+    <!-- Recatangle for nice looking ui -->
+    <div class="rectangle"></div>
+
+
+      
+
 </body>
 
 </html>

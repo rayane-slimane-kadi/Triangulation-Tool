@@ -1,0 +1,19 @@
+body {
+    background-color: #1D1E2C;
+}
+
+.g-signin2 {
+    right:100px;
+}
+
+.rectangle {
+    position:absolute;
+    width: 400px;
+    height: 600px;
+    background-color:aliceblue;
+    top:15%;
+    bottom:15%;
+    left:15%;
+    right:50px;
+    border-radius: 3%;
+}
