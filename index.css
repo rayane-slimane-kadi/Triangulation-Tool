@@ -1,5 +1,5 @@
 body {
-    background-color: #1D1E2C;
+    background-color: white;
 }
 
 .g-signin2 {
@@ -14,10 +14,22 @@ body {
     position:absolute;
     width: 400px;
     height: 600px;
-    background-color:aliceblue;
+    background: #04aa6d;;
     top:15%;
     bottom:15%;
     left:15%;
     right:50px;
     border-radius: 3%;
+}
+
+img{
+    border-radius:8px;
+    position:absolute;
+    width: 600px;
+    height: 400px;
+    bottom:0%;
+    right:0%;
+    left: 50%;
+    top: 50%;
+    
 }
