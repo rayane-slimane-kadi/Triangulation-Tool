@@ -5,22 +5,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triangulation Tool</title>
+    <style>
+      button5{
+      background-color: #04AA6D;
+      border: 2px solid #04AA6D;
+      color: white;
+      padding: 10px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      transition-duration: 0.4s;
+    }
+
+    button1{
+      background-color: #04AA6D;
+      border: 2px solid #04AA6D;
+      color: white;
+      padding: 10px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+        transition-duration: 0.4s;
+    }
+
+    button2{
+      background-color: #04AA6D;
+      border: 2px solid #04AA6D;
+      color: white;
+      padding: 10px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+        transition-duration: 0.4s;
+    }
+
+    button {
+     display: inline-block;
+     border-radius: 4px;
+     background-color: #04AA6D;
+     border: none;
+     color: #FFFFFF;
+     text-align: center;
+     font-size: 16px;
+     padding: 10px 32px;
+
+     transition: all 0.4s;
+     cursor: pointer;
+    }
+    
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button:hover span {
+      padding-right: 25px;
+    }
+    
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+    
+    button1:hover {
+        background-color: #FFFFFF; /* Green */
+        color: black;
+        cursor: pointer;
+
+    }   
+    button2:hover {
+        background-color: #FFFFFF; /* Green */
+        color: black;
+        cursor: pointer;
+    }
+
+      button5:hover{
+        background-color: #FFFFFF; /* Green */
+        color: black;
+        cursor: pointer;
+    }
+    </style>
     <!-- Additional meta tags, stylesheets, and scripts can be included here -->
 </head>
 
 <body>
-    <p>NOegeggi</p>
-
-    <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="classes.html">Classes</a></li>
-          <li><a href="students.html">Students</a></li>
-          <li><a href="units.html">Units</a></li>
-          <li><a href="expectations.html">Expectations</a></li>
-        </ul>
-      </nav>
-      
+  <a href="classes.html">
+    <button5 id = "Back">Back</button5>
+  </a>
+  <button1 id = "Add">Add</button1>
+  <button2 id = "Del">Delete</button2>
+    <h1>Units</h1>
+    <img src="https://i.ytimg.com/vi/Y04JWA-UvNI/maxresdefault.jpg" alt="Paris" width="300" height="300">
 
 </body>
 
