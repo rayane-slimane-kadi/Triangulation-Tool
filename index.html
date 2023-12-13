@@ -12,10 +12,24 @@
 </head>
 
 <body>
+    <script src="https://accounts.google.com/gsi/client" async></script>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <script src="script.js"></script>
     <h1>Triangulation Tool</h1>
 
+        <div id="g_id_onload"
+        data-client_id="466534754430-ev15coli1j97cqhfas1ene48lodpvgck.apps.googleusercontent.com"
+        data-login_uri="localhost:5500"
+        data-auto_prompt="false">
+    </div>
+    <div class="g_id_signin"
+        data-type="standard"
+        data-size="large"
+        data-theme="outline"
+        data-text="sign_in_with"
+        data-shape="rectangular"
+        data-logo_alignment="left">
+    </div>
     <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -26,18 +40,18 @@
         </ul>
     </nav>
 
-    <!-- Element to display user's name -->
-    <!-- <div id="user-name"></div>
+    <div id="user-name"></div>
+    <label for="variableLabel">Variable: </label>
     <script>
-        function onSignIn(googleUser) {
             // Get user profile information
-            var profile = googleUser.getBasicProfile();
-
-            // Display the user's name on your website
+            if (auth2.isSignedIn.get()) {
+            var profile = auth2.currentUser.get().getBasicProfile();
             var userName = profile.getName();
-            document.getElementById('user-name').innerHTML = 'Welcome, ' + userName + '!';
-        }
-    </script> -->
+        document.getElementById("variableLabel").textContent=userName;
+            }
+    </script>
+  
+
 
     <!-- Recatangle for nice looking ui -->
     <div class="rectangle"></div>
