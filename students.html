@@ -3,134 +3,29 @@
   <head>
     <title>Students</title>
     <meta charset="UTF-8">
-    <style>
-    h1{
-      text-align: center;
-      color: #000000;
-    font-family: "Times New Roman", Times, serif;
-    }
-    button5{
-      background-color: #04AA6D;
-      border: 2px solid #04AA6D;
-      color: white;
-      padding: 10px 32px;
-      text-align: center;
-      display: inline-block;
-      font-size: 16px;
-      transition-duration:0.4s;
-    }
-    button1{
-      background-color: #04AA6D;
-      border: 2px solid #04AA6D;
-      color: white;
-      padding: 10px 32px;
-      text-align: center;
-      display: inline-block;
-      font-size: 16px;
-        transition-duration: 0.4s;
-    }
-    button2{
-      background-color: #04AA6D;
-      border: 2px solid #04AA6D;
-      color: white;
-      padding: 10px 32px;
-      text-align: center;
-      display: inline-block;
-      font-size: 16px;
-        transition-duration: 0.4s;
-
-    }
-    button3{
-      background-color: #04AA6D;
-      border: 2px solid #04AA6D;
-      color: white;
-      padding: 50px 32px;
-      text-align: center;
-      display: inline-block;
-      font-size: 16px;
-        transition-duration: 0.4s;
-
-    }
-    button4{
-      background-color: #04AA6D;
-      border: 2px solid #04AA6D;
-      color: white;
-      padding: 50px 32px;
-      text-align: center;
-      display: inline-block;
-      font-size: 16px;
-        transition-duration: 0.4s;
-
-    }
-    
-    button {
-     display: inline-block;
-     border-radius: 4px;
-     background-color: #04AA6D;
-     border: none;
-     color: #FFFFFF;
-     text-align: center;
-     font-size: 16px;
-     padding: 10px 32px;
-
-     transition: all 0.4s;
-     cursor: pointer;
-    }
-    
-    .button span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-    }
-
-    .button span:after {
-      content: '\00bb';
-      position: absolute;
-      opacity: 0;
-      top: 0;
-      right: -20px;
-      transition: 0.5s;
-    }
-
-    .button:hover span {
-      padding-right: 25px;
-    }
-    
-    .button:hover span:after {
-      opacity: 1;
-      right: 0;
-    }
-    
-    button1:hover {
-        background-color: #FFFFFF; /* Green */
-        color: black;
-        cursor: pointer;
-
-    }   
-    button2:hover {
-        background-color: #FFFFFF; /* Green */
-        color: black;
-        cursor: pointer;
-    }   
-    button3:hover {
-        background-color: #FFFFFF; /* Green */
-        color: black;
-        cursor: pointer;
-    }   
-    button4:hover {
-        background-color: #FFFFFF; /* Green */
-        color: black;
-        cursor: pointer;
-    }   
-    button5:hover{
-      background-color: #FFFFFF; /* Green */
-        color: black;
-        cursor: pointer;
-    }
-    </style>
+    <link rel="stylesheet" href="students.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
   </head>
   <body>
+
+    <!-- Code for the Top Nav. Bar -->
+   <div class = "topnav">
+    <div class = "left-elements">
+        <label>Placeholder</label>
+    </div>
+    <div class = "center-elements">
+        <a href="index.html">Home</a>
+        <a href="classes.html">Classes</a>
+        <a href="students.html">Students</a>
+        <a href="units.html">Units</a>
+        <a href="expectations.html">Expectations</a>
+    </div>
+    <div class = "right-elements">
+        <label>Placeholder</label>
+    </div>
+  </div>
+
+
     <a href="units.html">
       <button5 id = "Back">Back</button5>
     </a>
@@ -142,6 +37,7 @@
     <a href="expectations.html">
       <button class="button" style="vertical-align:middle"><span>Next </span></button>
     </a>
+
   </body>
 </html>
 
