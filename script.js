@@ -15,6 +15,21 @@ function createClassroom() {
     div.innerHTML = "Class Setup";
     document.body.appendChild(div)
 
+     // Create the text field input
+     const textField = document.createElement("input");
+     textField.type = "text";
+     textField.placeholder = "Enter class name";
+     textField.style.width = "80%";
+     textField.style.padding = "8px";
+     textField.style.margin = "10px 0";
+     textField.style.border = "1px solid #ccc";
+     textField.style.borderRadius = "5px";
+     div.appendChild(textField);      // Append the text field to the main container div
+
+    //  Creating the save button
+    const saveBtn = document.createElement("button");
+    div.appendChild(saveBtn);
+
 
 
 }
