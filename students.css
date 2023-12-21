@@ -1,155 +1,164 @@
 h1{
-    text-align: center;
-    color: #000000;
-  font-family: "Times New Roman", Times, serif;
-  }
+  text-align: center;
+  color: #000000;
+font-family: "Times New Roman", Times, serif;
+}
 
-  .topnav {
-    background-color: white;
-    overflow: hidden;
-    position: fixed;
-    top: 0%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 0.1px solid #e0e0e0;
+.topnav {
+  background-color: white;
+  overflow: hidden;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.1px solid #e0e0e0;
 }
 
 .topnav a, label {
-    float: left;
-    display: block;
-    color: #333;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: Inter;
+  float: left;
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Inter;
 }
 
 .left-elements {
-    margin-right: auto;
+  margin-right: auto;
 }
 
 .right-elements {
-    margin-left: auto;
+  margin-left: auto;
 }
-  
 
-  button5{
-    background-color: #04AA6D;
-    border: 2px solid #04AA6D;
-    color: white;
-    padding: 10px 32px;
-    text-align: center;
+
+button5{
+  background-color: #04AA6D;
+  border: 2px solid #04AA6D;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration:0.4s;
+}
+button1{
+  background-color: #04AA6D;
+  border: 2px solid #04AA6D;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+    transition-duration: 0.4s;
+}
+button2{
+  background-color: #04AA6D;
+  border: 2px solid #04AA6D;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+    transition-duration: 0.4s;
+
+}
+button3{
+  background-color: #04AA6D;
+  border: 2px solid #04AA6D;
+  color: white;
+  padding: 50px 33px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+    transition-duration: 0.4s;
+
+}
+button4{
+  background-color: #04AA6D;
+  border: 2px solid #04AA6D;
+  color: white;
+  padding: 50px 33px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+    transition-duration: 0.4s;
+
+}
+
+button {
+ display: inline-block;
+ border-radius: 4px;
+ background-color: #04AA6D;
+ border: none;
+ color: #FFFFFF;
+ text-align: center;
+ font-size: 16px;
+ padding: 10px 32px;
+
+ transition: all 0.4s;
+ cursor: pointer;
+ position:fixed;
+ bottom:30%;
+ right:5%;
+}
+
+.button span {
+    cursor: pointer;
     display: inline-block;
-    font-size: 16px;
-    transition-duration:0.4s;
-  }
-  button1{
-    background-color: #04AA6D;
-    border: 2px solid #04AA6D;
-    color: white;
-    padding: 10px 32px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-      transition-duration: 0.4s;
-  }
-  button2{
-    background-color: #04AA6D;
-    border: 2px solid #04AA6D;
-    color: white;
-    padding: 10px 32px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-      transition-duration: 0.4s;
-
-  }
-  button3{
-    background-color: #04AA6D;
-    border: 2px solid #04AA6D;
-    color: white;
-    padding: 50px 32px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-      transition-duration: 0.4s;
-
-  }
-  button4{
-    background-color: #04AA6D;
-    border: 2px solid #04AA6D;
-    color: white;
-    padding: 50px 32px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-      transition-duration: 0.4s;
-
-  }
-  
-  button {
-   display: inline-block;
-   border-radius: 4px;
-   background-color: #04AA6D;
-   border: none;
-   color: #FFFFFF;
-   text-align: center;
-   font-size: 16px;
-   padding: 10px 32px;
-
-   transition: all 0.4s;
-   cursor: pointer;
-  }
-  
-  .button span {
-      cursor: pointer;
-      display: inline-block;
-      position: relative;
-      transition: 0.5s;
-  }
-
-  .button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
+    position: relative;
     transition: 0.5s;
-  }
+}
 
-  .button:hover span {
-    padding-right: 25px;
-  }
-  
-  .button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-  
-  button1:hover {
-      background-color: #FFFFFF; /* Green */
-      color: black;
-      cursor: pointer;
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
 
-  }   
-  button2:hover {
-      background-color: #FFFFFF; /* Green */
-      color: black;
-      cursor: pointer;
-  }   
-  button3:hover {
-      background-color: #FFFFFF; /* Green */
-      color: black;
-      cursor: pointer;
-  }   
-  button4:hover {
-      background-color: #FFFFFF; /* Green */
-      color: black;
-      cursor: pointer;
-  }   
-  button5:hover{
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+button1:hover {
     background-color: #FFFFFF; /* Green */
-      color: black;
-      cursor: pointer;
-  }
+    color: black;
+    cursor: pointer;
+
+}   
+button2:hover {
+    background-color: #FFFFFF; /* Green */
+    color: black;
+    cursor: pointer;
+}   
+button3:hover {
+    background-color: #FFFFFF; /* Green */
+    color: black;
+    cursor: pointer;
+}   
+button4:hover {
+    background-color: #FFFFFF; /* Green */
+    color: black;
+    cursor: pointer;
+}   
+button5:hover{
+  background-color: #FFFFFF; /* Green */
+    color: black;
+    cursor: pointer;
+}
+
+img{
+  position:fixed;
+  right: 5%;
+  bottom:40%;
+}

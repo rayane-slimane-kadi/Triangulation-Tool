@@ -1,20 +1,10 @@
-class classRoom{
-    //makenumclassroom variable
-    constructor(classN){
-        this.className = classN;
-    }
-    getClassName(){
-        return this.className;
-    }
-    setClassName(n){
-        this.className = n;
-    }
-}
+//array for classRoom
+const classRoom = [];
 
-class Unit extends classRoom{
-    constructor(unitN){
-        super(classN);
+class Unit{
+    constructor(unitN, classRoomNumber){
         this.unitName = unitN;
+        this.connectedClassRoomNum = classRoomNumber; 
     }
     getUnitName(){
         return this.unitName;
@@ -24,10 +14,8 @@ class Unit extends classRoom{
     }
 }
 
-class Student extends Unit{
-    //make picture variable
+class Student{
     constructor(studentN){
-        super(classN, unitN)
         this.studentName = studentN;
     }
     getStudentName(){
@@ -52,3 +40,9 @@ class checkBox{
         return this.checked;
     }
 }
+
+function fn1 () {
+    alert("BSDHfhdfhsdfsdf");
+}
+
+console.log(new Unit("iouuioiooiu", "joe"));
