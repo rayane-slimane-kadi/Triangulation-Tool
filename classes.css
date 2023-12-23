@@ -1,145 +1,8 @@
-button5{
-  background-color: #04AA6D;
-  border: 2px solid #04AA6D;
-  color: white;
-  padding: 10px 32px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  transition-duration:0.4s;
-}
-button1{
-  background-color: #04AA6D;
-  border: 2px solid #04AA6D;
-  color: white;
-  padding: 10px 32px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-    transition-duration: 0.4s;
-}
-button2{
-  background-color: #04AA6D;
-  border: 2px solid #04AA6D;
-  color: white;
-  padding: 10px 32px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-    transition-duration: 0.4s;
-
-}
-button3{
-  background-color: #04AA6D;
-  border: 2px solid #04AA6D;
-  color: white;
-  padding: 50px 40px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-    transition-duration: 0.4s;
-
-}
-button4{
-  background-color: #04AA6D;
-  border: 2px solid #04AA6D;
-  color: white;
-  padding: 50px 40px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-    transition-duration: 0.4s;
-
-}
-
-button6 {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #04AA6D;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 16px;
-  padding: 10px 32px;
-
-  transition: all 0.4s;
-  cursor: pointer;
- }
-
-button7 {
- display: inline-block;
- border-radius: 4px;
- background-color: #04AA6D;
- border: none;
- color: #FFFFFF;
- text-align: center;
- font-size: 16px;
- padding: 10px 32px;
-
- transition: all 0.4s;
- cursor: pointer;
- position:fixed;
- bottom:30%;
- right:5%;
-}
-
-button7 span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-}
-
-button7 span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-button7:hover span {
-  padding-right: 25px;
-}
-
-button7:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-button1:hover {
-    background-color: #FFFFFF; /* Green */
-    color: black;
-    cursor: pointer;
-
-}   
-button2:hover {
-    background-color: #FFFFFF; /* Green */
-    color: black;
-    cursor: pointer;
-}   
-button3:hover {
-    background-color: #FFFFFF; /* Green */
-    color: black;
-    cursor: pointer;
-}   
-button4:hover {
-    background-color: #FFFFFF; /* Green */
-    color: black;
-    cursor: pointer;
-}   
-button5:hover{
-  background-color: #FFFFFF; /* Green */
-    color: black;
-    cursor: pointer;
-}
-
 h1{
   text-align:center;
 }
 
-  .topnav {
+.topnav {
     background-color: white;
     overflow: hidden;
     position: fixed;
@@ -160,10 +23,16 @@ h1{
     font-family: Inter;
 }
 
-.left-elements {
+.left-elements a, label {
     margin-right: auto;
 }
 
-.right-elements {
+.right-elements a, label{
     margin-left: auto;
 }
+
+.contentContainer {
+  padding-top: 70px;
+  font-family: Inter;
+}
+
