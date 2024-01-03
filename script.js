@@ -1,44 +1,51 @@
-//array for classRoom
-const classRoom = [];
+function createClassroom() {
+    event.preventDefault(); // Prevent the browser from refreshing when pressing the "Add" button
 
-class Unit{
-    constructor(unitN, classRoomNumber){
-        this.unitName = unitN;
-        this.connectedClassRoomNum = classRoomNumber; 
-    }
-    getUnitName(){
-        return this.unitName;
-    }
-    setUnitName(n){
-        this.unitName = n;
-    }
+    //get classroom name from user
+    let classRoomInput = prompt("Please enter the name of the class", "");
+    
+    //make button 60
+    const newButton = document.createElement('button');
+    newButton.textContent = classRoomInput;
+    document.body.appendChild(newButton);
+
 }
 
-class Student{
-    constructor(studentN){
-        this.studentName = studentN;
-    }
-    getStudentName(){
-        return this.studentName;
-    }
-    setStudentName(n){
-        this.studentName = n;
-    }
-    toString(){
-        return(studentName + "gahh");
-    }
+function createStudent() {
+    event.preventDefault(); // Prevent the browser from refreshing when pressing the "Add" button
+
+    //get classroom name from user
+    let classRoomInput = prompt("Please enter the student's name:", "");
+    
+    //make button 60
+    const newButton = document.createElement('button');
+    newButton.textContent = classRoomInput;
+    document.body.appendChild(newButton);
+
 }
 
-class checkBox{
-    constructor(){
-        this.checked = false;
-    }
-    clicked(){
-        this.checked = true;
-    }
-    getChecked(){
-        return this.checked;
-    }
+function createUnit() {
+    event.preventDefault(); // Prevent the browser from refreshing when pressing the "Add" button
+
+    //get classroom name from user
+    let classRoomInput = prompt("Please enter the name of the unit:", "");
+    
+    //make button 60
+    const newButton = document.createElement('button');
+    newButton.textContent = classRoomInput;
+    document.body.appendChild(newButton);
+
 }
 
-console.log(new Unit("iouuioiooiu", "joe"));
+function createExpectation() {
+    event.preventDefault(); // Prevent the browser from refreshing when pressing the "Add" button
+
+    //get classroom name from user
+    let classRoomInput = prompt("Please enter an expectation:", "");
+    
+    //make button 60
+    const newButton = document.createElement('button');
+    newButton.textContent = classRoomInput;
+    document.body.appendChild(newButton);
+
+}
