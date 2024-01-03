@@ -7,6 +7,9 @@ function createClassroom() {
     //make button 60
     const newButton = document.createElement('button');
     newButton.textContent = classRoomInput;
+    newButton.onclick = function() {
+        window.location.href = "students.html";
+    };
     document.body.appendChild(newButton);
 
 }
@@ -19,6 +22,9 @@ function createStudent() {
     
     //make button 60
     const newButton = document.createElement('button');
+    newButton.onclick = function() {
+        window.location.href = "units.html";
+    };
     newButton.textContent = classRoomInput;
     document.body.appendChild(newButton);
 
@@ -32,6 +38,9 @@ function createUnit() {
     
     //make button 60
     const newButton = document.createElement('button');
+    newButton.onclick = function() {
+        window.location.href = "expectations.html";
+    };
     newButton.textContent = classRoomInput;
     document.body.appendChild(newButton);
 
@@ -49,3 +58,4 @@ function createExpectation() {
     document.body.appendChild(newButton);
 
 }
+
