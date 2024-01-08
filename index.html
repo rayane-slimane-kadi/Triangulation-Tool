@@ -4,18 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <!-- <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css"> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <title>Triangulation Tool</title>
-
-    <script>
-      window.onload = function() {
-        var win = window.open("https://script.google.com/macros/s/AKfycbxfZ_U1jDPDUvO34KixOzZeIWCM4IPl7sp5NxJK2WA/dev");
-      }
-    </script>
-
-
-
 </head>
 
 <body>
@@ -27,18 +19,95 @@
    <!-- Code for the Top Nav. Bar -->
    <div class = "topnav">
     <div class = "left-elements">
-      <a href="" onclick="createClassroom()">Add</a>
     </div>
     <div class = "right-elements">
-      <label>Placeholder</label>
+      <a href="" onclick="createClassroom()">Add</a>
+      <a href="" onclick="deleteClassroom()">Delete</a>
     </div>
   </div>
 
   <!-- Code for rest of the page -->
-  <div class = "contentContainer">
+  <div class = "content-container">
     <h1>Classes</h1>
+    <?!= newElement ?>
   </div>
 
 </body>
 
+
+
+
+
+
+
+
+<!-- CSS Styling -->
+<style>
+  h1{
+    text-align:center;
+  }
+  
+  .topnav {
+      background-color: white;
+      overflow: hidden;
+      position: fixed;
+      top: 0%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 0.1px solid #e0e0e0;
+  }
+  
+  .topnav a, label {
+      float: left;
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-family: Inter;
+  }
+  
+  .left-elements a, label {
+      margin-right: auto;
+  }
+  
+  .right-elements a, label{
+      margin-left: auto;
+  }
+  
+  .content-container {
+    padding-top: 70px;
+    font-family: Inter;
+  }
+
+  button {
+    font-family: Inter;
+  }
+</style>
+
+<script>
+  function createClassroom() {
+    event.preventDefault(); // Prevent the browser from refreshing when pressing the "Add" button
+
+    //get classroom name from user
+    let classRoomInput = prompt("Please enter the name of the class", "");
+    
+    //make button 60
+    const newButton = document.createElement('button');
+    newButton.textContent = classRoomInput;
+    newButton.onclick = function() {
+        window.location.href = "students.html";
+    };
+    document.body.appendChild(newButton);
+
+}
+
+function deleteClassroom() {
+    event.preventDefault(); // Prevent the browser from refreshing when pressing the "Add" button
+
+   
+
+}
+</script>
 </html>
