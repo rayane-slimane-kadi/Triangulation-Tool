@@ -1,43 +1,39 @@
-body {
-    background-color: white;
-    margin: 0;
-    padding: 0;
-}
-
-.topnav {
-    background-color: white;
-    overflow: hidden;
-    position: fixed;
-    top: 0%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 0.1px solid #e0e0e0;
-}
-
-.topnav a, label {
-    float: left;
-    display: block;
-    color: #333;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: Inter;
-}
-
-.left-elements {
-    margin-right: auto;
-}
-
-.right-elements {
-    margin-left: auto;
-}
+h1{
+    text-align:center;
+  }
   
-.auth-buttons {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
- 
+  .topnav {
+      background-color: white;
+      overflow: hidden;
+      position: fixed;
+      top: 0%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 0.1px solid #e0e0e0;
+  }
+  
+  .topnav a, label {
+      float: left;
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-family: Inter;
+  }
+  
+  .left-elements a, label {
+      margin-right: auto;
+  }
+  
+  .right-elements a, label{
+      margin-left: auto;
+  }
+  
+  .contentContainer {
+    padding-top: 70px;
+    font-family: Inter;
+  }
+  
+  
