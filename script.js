@@ -52,10 +52,29 @@ function createExpectation() {
     //get classroom name from user
     let classRoomInput = prompt("Please enter an expectation:", "");
     
-    //make button 60
-    const newButton = document.createElement('button');
-    newButton.textContent = classRoomInput;
-    document.body.appendChild(newButton);
+    
+    
+    var div = document.createElement("div");
+    div.style.display = "block";
+
+    document.body.appendChild(div);
+        
+    
+    
+    
+    
+    const newLabel = document.createElement('label');
+    newLabel.textContent = classRoomInput;
+    document.body.appendChild(newLabel);
+    const newCheck = document.createElement('input');
+    newCheck.type = "checkbox";
+    document.body.appendChild(newCheck);
+    const textField = document.createElement('input');
+    textField.type = "text";
+    document.body.appendChild(textField);
+    const saveBtn = document.createElement('button');
+    saveBtn.textContent = "Save";
+    document.body.appendChild(saveBtn);
 
 }
 
