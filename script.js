@@ -61,33 +61,17 @@ function createExpectation() {
     // Get the table and insert a new row at the end 
     let table = document.getElementById("expectationtable"); 
     let newRow = table.insertRow(table.rows.length); 
-        
+
     // Insert data into cells of the new row 
     newRow.insertCell(0).innerHTML = excpectationtext; 
-    newRow.insertCell(1).innerHTML = <input type="checkbox" name="checkbox" value="1" />; 
-    // newRow.insertCell(2).innerHTML = mobile; 
-    // newRow.insertCell(3).innerHTML = address; 
-    // newRow.insertCell(4).innerHTML = 
-    //     '<button onclick="editData(this)">Edit</button>'+ 
-    //     '<button onclick="deleteData(this)">Delete</button>'; 
-        
+    newRow.insertCell(1).innerHTML = '<input type="checkbox" name="checkbox" value="1" />'; 
+    newRow.insertCell(2).innerHTML =  '<input type="text" id="expcomment" name="expcomment">';  
+    
     // Clear input fields??????????????????????? 
     clearInputs(); 
+}
 
-/*
-    document.body.appendChild(div);
-    
-    const newLabel = document.createElement('label');
-    newLabel.textContent = classRoomInput;
-    document.body.appendChild(newLabel);
-    const newCheck = document.createElement('input');
-    newCheck.type = "checkbox";
-    document.body.appendChild(newCheck);
-    const textField = document.createElement('input');
-    textField.type = "text";
-    document.body.appendChild(textField);
-    const saveBtn = document.createElement('button');
-    saveBtn.textContent = "Save";
-    document.body.appendChild(saveBtn);
-*/
+function saveToStorage(){
+    localStorage.setItem();
+    document.getElementById
 }
