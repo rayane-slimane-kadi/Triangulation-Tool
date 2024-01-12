@@ -50,31 +50,28 @@ function createExpectation() {
     event.preventDefault(); // Prevent the browser from refreshing when pressing the "Add" button
 
     //get classroom name from user
-    let classRoomInput = prompt("Please enter an expectation:", "");
-    
-    
+    let expectationInput = prompt("Please enter an expectation:", "");
     
     var div = document.createElement("div");
     div.style.display = "block";
 
-    document.body.appendChild(div);
-        
-    
-    
-    
-    
-    const newLabel = document.createElement('label');
-    newLabel.textContent = classRoomInput;
-    document.body.appendChild(newLabel);
-    const newCheck = document.createElement('input');
-    newCheck.type = "checkbox";
-    document.body.appendChild(newCheck);
-    const textField = document.createElement('input');
-    textField.type = "text";
-    document.body.appendChild(textField);
-    const saveBtn = document.createElement('button');
-    saveBtn.textContent = "Save";
-    document.body.appendChild(saveBtn);
+    // Get input values 
+    let excpectationtext = expectationInput; 
 
+    // Get the table and insert a new row at the end 
+    let table = document.getElementById("expectationtable"); 
+    let newRow = table.insertRow(table.rows.length); 
+
+    // Insert data into cells of the new row 
+    newRow.insertCell(0).innerHTML = excpectationtext; 
+    newRow.insertCell(1).innerHTML = '<input type="checkbox" name="checkbox" value="1" />'; 
+    newRow.insertCell(2).innerHTML =  '<input type="text" id="expcomment" name="expcomment">';  
+    
+    // Clear input fields??????????????????????? 
+    clearInputs(); 
 }
 
+function saveToStorage(){
+    localStorage.setItem();
+    document.getElementById
+}
