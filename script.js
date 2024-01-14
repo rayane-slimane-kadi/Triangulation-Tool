@@ -1,77 +1,149 @@
-function createClassroom() {
+function addCourse() {
     event.preventDefault(); // Prevent the browser from refreshing when pressing the "Add" button
 
     //get classroom name from user
-    let classRoomInput = prompt("Please enter the name of the class", "");
-    
-    //make button 60
-    const newButton = document.createElement('button');
-    newButton.textContent = classRoomInput;
-    newButton.onclick = function() {
-        window.location.href = "students.html";
-    };
-    document.body.appendChild(newButton);
+    var input = prompt("Please enter the name of the course:", "");
 
+    if (input === '') {
+        alert('Input is blank!');
+    }
+    else if (input === null) {
+        
+    }
+    else {
+        var card = document.createElement("div");
+        var viewButton = document.createElement("button");
+        viewButton.textContent = "View";
+        var name = document.createElement("h3");
+        name.textContent = input;
+        var content = document.querySelector(".content");
+    
+        card.className = "card";
+        viewButton.className = "view-button";
+        name.className = "name";
+    
+        content.appendChild(card);
+        card.appendChild(name);
+        card.appendChild(viewButton);
+    }
 }
 
-function createStudent() {
+function addStudent() {
     event.preventDefault(); // Prevent the browser from refreshing when pressing the "Add" button
 
-    //get classroom name from user
-    let classRoomInput = prompt("Please enter the student's name:", "");
-    
-    //make button 60
-    const newButton = document.createElement('button');
-    newButton.onclick = function() {
-        window.location.href = "units.html";
-    };
-    newButton.textContent = classRoomInput;
-    document.body.appendChild(newButton);
+    var input = prompt("Please enter the name of the student:", "");
+    if (input === '') {
+        alert('Input is blank!');
+    }
+    else if (input === null) {
+        
+    }
+    else {
+        var card = document.createElement("div");
+        var viewButton = document.createElement("button");
+        viewButton.textContent = "View";
+        var name = document.createElement("h3");
+        name.textContent = input;
+        var content = document.querySelector(".content");
 
+        card.className = "card";
+        viewButton.className = "view-button";
+        name.className = "name";
+
+        content.appendChild(card);
+        card.appendChild(name);
+        card.appendChild(viewButton);
+    }
+ 
 }
 
-function createUnit() {
+function addUnit() {
     event.preventDefault(); // Prevent the browser from refreshing when pressing the "Add" button
 
-    //get classroom name from user
-    let classRoomInput = prompt("Please enter the name of the unit:", "");
+    var input = prompt("Please enter the name of the unit:", "");
+    if (input === '') {
+        alert('Input is blank!');
+    }
+    else if (input === null) {
+        
+    }
+    else {
+        var card = document.createElement("div");
+        var viewButton = document.createElement("button");
+        viewButton.textContent = "View";
+        var name = document.createElement("h3");
+        name.textContent = input;
+        var content = document.querySelector(".content");
     
-    //make button 60
-    const newButton = document.createElement('button');
-    newButton.onclick = function() {
-        window.location.href = "expectations.html";
-    };
-    newButton.textContent = classRoomInput;
-    document.body.appendChild(newButton);
-
+        card.className = "card";
+        viewButton.className = "view-button";
+        name.className = "name";
+    
+        content.appendChild(card);
+        card.appendChild(name);
+        card.appendChild(viewButton);
+    }
+   
+ 
 }
 
-function createExpectation() {
+function addExpectation() {
     event.preventDefault(); // Prevent the browser from refreshing when pressing the "Add" button
 
-    //get classroom name from user
-    let expectationInput = prompt("Please enter an expectation:", "");
+    var input = prompt("Please enter an expectation:", "");
+    if (input === '') {
+        alert('Input is blank!');
+    }
+    else if (input === null) {
+        
+    }
+    else {
+        var card = document.createElement("div");
+        var commentButton = document.createElement("button");
+        var checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        commentButton.textContent = "Add Comment";
+        var name = document.createElement("label");
+        name.textContent = input;
+        var content = document.querySelector(".content");
+        var nameContainer = document.createElement("div");
+        var checkboxContainer = document.createElement("div");
+        var commentContainer = document.createElement("div");
     
-    var div = document.createElement("div");
-    div.style.display = "block";
-
-    // Get input values 
-    let excpectationtext = expectationInput; 
-
-    // Get the table and insert a new row at the end 
-    let table = document.getElementById("expectationtable"); 
-    let newRow = table.insertRow(table.rows.length); 
-
-    // Insert data into cells of the new row 
-    newRow.insertCell(0).innerHTML = excpectationtext; 
-    newRow.insertCell(1).innerHTML = '<input type="checkbox" name="checkbox" value="1" />'; 
-    newRow.insertCell(2).innerHTML =  '<input type="text" id="expcomment" name="expcomment">';  
+        card.className = "card";
+        commentButton.className = "add-comment-button";
+        name.className = "name";
+        checkbox.className = "checkbox";
+        nameContainer.className = "name-container";
+        checkboxContainer.className = "checkbox-container";
+        commentContainer.className = "comment-container";
     
-    // Clear input fields??????????????????????? 
-    clearInputs(); 
-}
+        content.appendChild(card);
+        card.appendChild(nameContainer);
+        card.appendChild(checkboxContainer);
+        card.appendChild(commentContainer);
+        nameContainer.appendChild(name);
+        checkboxContainer.appendChild(checkbox);
+        commentContainer.appendChild(commentButton);
 
-function saveToStorage(){
-    localStorage.setItem();
-    document.getElementById
+        commentButton.onclick = function(event) {
+            var clickedButton = event.target;
+            var input = prompt("Please add a comment:", "");
+            if (input === '') {
+                alert('Input is blank!');
+            }
+            else if (input === null) {
+                
+            }
+            else {
+                var name = document.createElement("label");
+                name.textContent = "Comment: " + input;
+                name.className = "name-container";
+                clickedButton.parentNode.appendChild(name);
+                clickedButton.remove();
+            }
+                }
+            }
+   
+ 
 }

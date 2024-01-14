@@ -1,39 +1,94 @@
-h1{
-    text-align:center;
-  }
-  
-  .topnav {
-      background-color: white;
-      overflow: hidden;
-      position: fixed;
-      top: 0%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 0.1px solid #e0e0e0;
-  }
-  
-  .topnav a, label {
-      float: left;
-      display: block;
-      color: #333;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-family: Inter;
-  }
-  
-  .left-elements a, label {
-      margin-right: auto;
-  }
-  
-  .right-elements a, label{
-      margin-left: auto;
-  }
-  
-  .contentContainer {
-    padding-top: 70px;
+.sidebar {
+    height: 100%;
+    width: 150px;
+    z-index: 1; /* Sets it as the foreground */
+    position: fixed;
+    background-color: #f3f6fc;
+    top: 0;
+    left: 0;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar a {
     font-family: Inter;
-  }
-  
-  
+    font-size: 16px;
+    color: black;
+    text-decoration: none; /* Removes underline */
+    display: block;
+    padding-bottom: 50px;
+}
+
+/* Highlighting the Home icon */
+#courses-icon {
+  background-color: #c2e7ff;
+  border-radius: 6px;
+}
+
+/* Pushes the "add" button to the bottom */
+.add-section {
+    margin-top:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main {
+    margin-left: 150px;
+    text-align: center;
+    font-family: Inter;
+}
+
+.header {
+    height:100px;
+    width:100%;
+    background-color: #c2e7ff;
+    border-radius: 24px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    font-weight: lighter;
+}
+
+.content {
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin-bottom: 25px;
+    height:150px;
+    width:300px;
+    background-color: #f3f6fc;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 24px;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.view-button {
+    border:none;
+    outline:none;
+    width:30%;
+    background-color: #004a77;
+    color: #c2e7ff;
+    font-size: 16px;
+    font-family: Inter;
+    border-radius: 24px;
+    padding: 12px;
+    font-weight: bolder;
+}
+
+.name {
+    font-size: 24px;
+}
