@@ -73,7 +73,7 @@ function addStudent() {
 
         deleteButton.onclick = function(event) {
             var clickedButton = event.target;
-            if (confirm("Warning! This will delete this course and all information within it!")) {
+            if (confirm("Warning! This will delete this student and all information within it!")) {
                 clickedButton.parentNode.remove();
             }
         }
@@ -114,7 +114,7 @@ function addUnit() {
 
         deleteButton.onclick = function(event) {
             var clickedButton = event.target;
-            if (confirm("Warning! This will delete this course and all information within it!")) {
+            if (confirm("Warning! This will delete this unit and all information within it!")) {
                 clickedButton.parentNode.remove();
             }
         }
@@ -189,7 +189,7 @@ function addExpectation() {
 
         deleteButton.onclick = function(event) {
             var clickedButton = event.target;
-            if (confirm("Warning! This will delete this course and all information within it!")) {
+            if (confirm("Warning! This will delete this expectation and all information within it!")) {
                 clickedButton.parentNode.parentNode.parentNode.remove();
             }
         }
