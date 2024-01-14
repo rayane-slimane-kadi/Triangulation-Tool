@@ -17,14 +17,25 @@ function addCourse() {
         var name = document.createElement("h3");
         name.textContent = input;
         var content = document.querySelector(".content");
+        var deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
     
         card.className = "card";
         viewButton.className = "view-button";
         name.className = "name";
+        deleteButton.className = "delete-button";
     
         content.appendChild(card);
         card.appendChild(name);
         card.appendChild(viewButton);
+        card.appendChild(deleteButton);
+
+        deleteButton.onclick = function(event) {
+            var clickedButton = event.target;
+            if (confirm("Warning! This will delete this course and all information within it!")) {
+                clickedButton.parentNode.remove();
+            }
+        }
     }
 }
 
@@ -45,14 +56,27 @@ function addStudent() {
         var name = document.createElement("h3");
         name.textContent = input;
         var content = document.querySelector(".content");
+        var deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
 
         card.className = "card";
         viewButton.className = "view-button";
         name.className = "name";
+        deleteButton.className = "delete-button";
+
 
         content.appendChild(card);
         card.appendChild(name);
         card.appendChild(viewButton);
+        card.appendChild(deleteButton);
+
+
+        deleteButton.onclick = function(event) {
+            var clickedButton = event.target;
+            if (confirm("Warning! This will delete this course and all information within it!")) {
+                clickedButton.parentNode.remove();
+            }
+        }
     }
  
 }
@@ -74,14 +98,26 @@ function addUnit() {
         var name = document.createElement("h3");
         name.textContent = input;
         var content = document.querySelector(".content");
+        var deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
     
         card.className = "card";
         viewButton.className = "view-button";
         name.className = "name";
+        deleteButton.className = "delete-button";
+
     
         content.appendChild(card);
         card.appendChild(name);
         card.appendChild(viewButton);
+        card.appendChild(deleteButton);
+
+        deleteButton.onclick = function(event) {
+            var clickedButton = event.target;
+            if (confirm("Warning! This will delete this course and all information within it!")) {
+                clickedButton.parentNode.remove();
+            }
+        }
     }
    
  
@@ -109,6 +145,9 @@ function addExpectation() {
         var nameContainer = document.createElement("div");
         var checkboxContainer = document.createElement("div");
         var commentContainer = document.createElement("div");
+        var deleteContainer = document.createElement("div");
+        var deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
     
         card.className = "card";
         commentButton.className = "add-comment-button";
@@ -117,6 +156,8 @@ function addExpectation() {
         nameContainer.className = "name-container";
         checkboxContainer.className = "checkbox-container";
         commentContainer.className = "comment-container";
+        deleteContainer.className = "delete-container";
+        deleteButton.className = "delete-button";
     
         content.appendChild(card);
         card.appendChild(nameContainer);
@@ -125,6 +166,8 @@ function addExpectation() {
         nameContainer.appendChild(name);
         checkboxContainer.appendChild(checkbox);
         commentContainer.appendChild(commentButton);
+        checkboxContainer.appendChild(deleteContainer);
+        deleteContainer.appendChild(deleteButton);
 
         commentButton.onclick = function(event) {
             var clickedButton = event.target;
@@ -142,8 +185,15 @@ function addExpectation() {
                 clickedButton.parentNode.appendChild(name);
                 clickedButton.remove();
             }
-                }
+        }
+
+        deleteButton.onclick = function(event) {
+            var clickedButton = event.target;
+            if (confirm("Warning! This will delete this course and all information within it!")) {
+                clickedButton.parentNode.parentNode.parentNode.remove();
             }
+        }
+    }
    
  
 }
