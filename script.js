@@ -19,6 +19,10 @@ function addCourse() {
         var content = document.querySelector(".content");
         var deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
+
+        viewButton.onclick = function() {
+            window.location.href = "students.html";
+        }
     
         card.className = "card";
         viewButton.className = "view-button";
@@ -58,6 +62,10 @@ function addStudent() {
         var content = document.querySelector(".content");
         var deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
+
+        viewButton.onclick = function() {
+            window.location.href = "units.html";
+        }
 
         card.className = "card";
         viewButton.className = "view-button";
@@ -100,6 +108,10 @@ function addUnit() {
         var content = document.querySelector(".content");
         var deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
+
+        viewButton.onclick = function() {
+            window.location.href = "expectations.html";
+        }
     
         card.className = "card";
         viewButton.className = "view-button";
