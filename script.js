@@ -17,25 +17,17 @@ function addCourse() {
         var name = document.createElement("h3");
         name.textContent = input;
         var content = document.querySelector(".content");
-        var deleteButton = document.createElement("button");
-        deleteButton.textContent = "Delete";
     
         card.className = "card";
         viewButton.className = "view-button";
         name.className = "name";
-        deleteButton.className = "delete-button";
     
         content.appendChild(card);
         card.appendChild(name);
         card.appendChild(viewButton);
-        card.appendChild(deleteButton);
 
-        deleteButton.onclick = function(event) {
-            var clickedButton = event.target;
-            if (confirm("Warning! This will delete this course and all information within it!")) {
-                clickedButton.parentNode.remove();
-            }
-        }
+        var deleteButton = createDeleteButton(deleteCourse);
+        card.appendChild(deleteButton);
     }
 }
 
@@ -56,27 +48,17 @@ function addStudent() {
         var name = document.createElement("h3");
         name.textContent = input;
         var content = document.querySelector(".content");
-        var deleteButton = document.createElement("button");
-        deleteButton.textContent = "Delete";
 
         card.className = "card";
         viewButton.className = "view-button";
         name.className = "name";
-        deleteButton.className = "delete-button";
-
 
         content.appendChild(card);
         card.appendChild(name);
         card.appendChild(viewButton);
+
+        var deleteButton = createDeleteButton(deleteCourse);
         card.appendChild(deleteButton);
-
-
-        deleteButton.onclick = function(event) {
-            var clickedButton = event.target;
-            if (confirm("Warning! This will delete this student and all information within it!")) {
-                clickedButton.parentNode.remove();
-            }
-        }
     }
  
 }
@@ -98,26 +80,17 @@ function addUnit() {
         var name = document.createElement("h3");
         name.textContent = input;
         var content = document.querySelector(".content");
-        var deleteButton = document.createElement("button");
-        deleteButton.textContent = "Delete";
     
         card.className = "card";
         viewButton.className = "view-button";
         name.className = "name";
-        deleteButton.className = "delete-button";
-
     
         content.appendChild(card);
         card.appendChild(name);
         card.appendChild(viewButton);
-        card.appendChild(deleteButton);
 
-        deleteButton.onclick = function(event) {
-            var clickedButton = event.target;
-            if (confirm("Warning! This will delete this unit and all information within it!")) {
-                clickedButton.parentNode.remove();
-            }
-        }
+        var deleteButton = createDeleteButton(deleteCourse);
+        card.appendChild(deleteButton);
     }
    
  
@@ -145,9 +118,6 @@ function addExpectation() {
         var nameContainer = document.createElement("div");
         var checkboxContainer = document.createElement("div");
         var commentContainer = document.createElement("div");
-        var deleteContainer = document.createElement("div");
-        var deleteButton = document.createElement("button");
-        deleteButton.textContent = "Delete";
     
         card.className = "card";
         commentButton.className = "add-comment-button";
@@ -156,8 +126,6 @@ function addExpectation() {
         nameContainer.className = "name-container";
         checkboxContainer.className = "checkbox-container";
         commentContainer.className = "comment-container";
-        deleteContainer.className = "delete-container";
-        deleteButton.className = "delete-button";
     
         content.appendChild(card);
         card.appendChild(nameContainer);
@@ -166,8 +134,9 @@ function addExpectation() {
         nameContainer.appendChild(name);
         checkboxContainer.appendChild(checkbox);
         commentContainer.appendChild(commentButton);
-        checkboxContainer.appendChild(deleteContainer);
-        deleteContainer.appendChild(deleteButton);
+
+        var deleteButton = createDeleteButton(deleteCourse);
+        card.appendChild(deleteButton);
 
         commentButton.onclick = function(event) {
             var clickedButton = event.target;
@@ -185,15 +154,47 @@ function addExpectation() {
                 clickedButton.parentNode.appendChild(name);
                 clickedButton.remove();
             }
-        }
-
-        deleteButton.onclick = function(event) {
-            var clickedButton = event.target;
-            if (confirm("Warning! This will delete this expectation and all information within it!")) {
-                clickedButton.parentNode.parentNode.parentNode.remove();
+                }
             }
-        }
+}
+
+function createDeleteButton(deleteFunction) { //the create delete button needs a function input to assign to that delete button
+    var deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+    deleteButton.className = "delete-button";
+    deleteButton.addEventListener("click", deleteFunction);
+
+    return deleteButton;
+}
+
+function deleteCourse() {
+    var confirmation = confirm("Are you sure you want to delete this course?");
+    if (confirmation) {
+        var card = this.parentNode;
+        card.parentNode.removeChild(card);
     }
-   
- 
+}
+
+function deleteStudent() {
+    var confirmation = confirm("Are you sure you want to delete this student?");
+    if (confirmation) {
+        var card = this.parentNode;
+        card.parentNode.removeChild(card);
+    }
+}
+
+function deleteUnit() {
+    var confirmation = confirm("Are you sure you want to delete this unit?");
+    if (confirmation) {
+        var card = this.parentNode;
+        card.parentNode.removeChild(card);
+    }
+}
+
+function deleteExpectation() {
+    var confirmation = confirm("Are you sure you want to delete this expectation?");
+    if (confirmation) {
+        var card = this.parentNode;
+        card.parentNode.removeChild(card);
+    }
 }
