@@ -219,22 +219,22 @@ function fileUploaded() {
 }
 
 function getCSVContent(csvContent) {
-    // Parse CSV content into an array of rows
+    //parse CSV content into an array of rows
     var rows = csvContent.split('\n');
 
-    // Extract course name from the file name (excluding the extension)
+    //extract course name from the file name (excluding the extension)
     var fileName = document.getElementById('file-input').files[0].name;
     var courseName = fileName.replace('.csv', '');
 
-    // Save course name in local storage
+    //save course name in local storage
     saveCourseName(courseName);
 
-    // Process each row of the CSV
+    //process each row of the CSV
     rows.forEach(row => {
-        // Split the row into columns
+        //split the row into columns
         var columns = row.split(',');
 
-        // Check if there are at least two columns (first name and last name)
+        // check if there are at least two columns (first name and last name)
         if (columns.length >= 2) {
             var firstName = columns[0].trim();
             var lastName = columns[1].trim();
@@ -246,13 +246,13 @@ function getCSVContent(csvContent) {
 }
 
 function saveCourseName(courseName) {
-    // Retrieve existing courses names from local storage
+    // retrieve existing courses names from local storage
     var existingCourses = JSON.parse(localStorage.getItem('courses')) || [];
 
-    // Add the new course name
+    // add the new course name
     existingCourses.push(courseName);
 
-    // Save the updated course names back to local storage
+    // save the updated course names back to local storage
     localStorage.setItem('courses', JSON.stringify(existingCourses));
 }
 
@@ -268,23 +268,23 @@ function saveStudent(courseName, firstName, lastName) {
 }
 
 function loadCourses() {
-    // Retrieve existing course names from local storage
+    //retrieve existing course names from local storage
     var existingCourses = JSON.parse(localStorage.getItem('courses')) || [];
 
-    // Get the content container
+    //get the content container
     var content = document.querySelector(".content");
 
-    // Clear the existing content
+    //clear the existing content
     content.innerHTML = '';
 
-    // Iterate through existing courses and add them to the content
+    //iterate through existing courses and add them to the content
     existingCourses.forEach(courseName => {
         // Create the course visually
         createCourse(courseName);
     });
 }
 
-// New function to create a course visually
+//new function to create a course visually
 function createCourse(courseName) {
     var card = document.createElement("div");
     var viewButton = document.createElement("button");
@@ -307,23 +307,23 @@ function createCourse(courseName) {
 }
 
 function loadCourses() {
-    // Retrieve existing course names from local storage
+    //retrieve existing course names from local storage
     var existingCourses = JSON.parse(localStorage.getItem('courses')) || [];
 
     // Get the content container
     var content = document.querySelector(".content");
 
-    // Clear the existing content
+    //clear the existing content
     content.innerHTML = '';
 
-    // Iterate through existing courses and add them to the content
+    //iterate through existing courses and add them to the content
     existingCourses.forEach(courseName => {
         // Create the course visually
         createCourse(courseName);
     });
 }
 
-// New function to create a course visually
+//new function to create a course visually
 function createCourse(courseName) {
     var card = document.createElement("div");
     var viewButton = document.createElement("button");
@@ -341,12 +341,12 @@ function createCourse(courseName) {
     var deleteButton = createDeleteButton(deleteCourse);
     card.appendChild(deleteButton);
 
-    // Append the card to the content container
+    //append the card to the content container
     document.querySelector(".content").appendChild(card);
 }
 
 function clearLocalStorage() {
-    // Clear all local storage
+    // clear all local storage
     localStorage.clear();
 
     // Clear the content on the page
