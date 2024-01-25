@@ -125,28 +125,3 @@ border-radius: 6px;
   padding: 12px;
   font-weight: bolder;
 }
-
-.delete-button {
-  background-color: #c2e7ff;
-  font-family: Inter;
-  font-weight: bold;
-  font-size: 12px;
-  border: none;
-  outline: none;
-  border-radius: 72px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.delete-container {
-  position:relative;
-  bottom:-25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.checkbox {
-  position:relative;
-  bottom:-12px;
-}
