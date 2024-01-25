@@ -5,16 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triangulation Tool</title>
+
+    <!-- Linking external stylesheets -->
     <link rel="stylesheet" href="expectations.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter"> <!-- Getting Inter font family -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> <!-- Getting icons -->
+
     <script src="script.js"></script>
 </head>
 
 <body>
 
-    <!-- Code for Sidebar -->
+    <!-- Sidebar for navigation -->
     <div class="sidebar">
+        <!-- Icons and links for different sections -->
         <span class="material-symbols-outlined" id="courses-icon">school</span>
         <a id="courses-label" href="index.html">Courses</a>
         <span class="material-symbols-outlined" id="students-icon">group</span>
@@ -23,16 +27,20 @@
         <a id="units-label" href="units.html">Units</a>
         <span class="material-symbols-outlined" id="expectations-icon">done</span>
         <a id="expectations-label" href="expectations.html">Expectations</a>
-        
+
+        <!-- Section for adding new expectations -->
         <div class="add-section">
             <span class="material-symbols-outlined" id="add-icon">add</span>
             <a id="add-label" href="" onclick="addExpectation()">Add</a>
         </div>
     </div>
 
-    <!-- Main Content -->
+    <!-- Main Content Section -->
     <div class="main">
+        <!-- title of the page -->
         <h1>Triangulation Tool</h1>
+
+        <!-- header section for the current page -->
         <div class="header">
             <h2 id="header">Expectations</h2>
         </div>

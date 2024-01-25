@@ -1,3 +1,4 @@
+/* Styles for the Sidebar */
 .sidebar {
   height: 100%;
   width: 150px;
@@ -12,6 +13,7 @@
   align-items: center;
 }
 
+/* Styles for Sidebar Links */
 .sidebar a {
   font-family: Inter;
   font-size: 16px;
@@ -23,52 +25,56 @@
 
 /* Highlighting the Home icon */
 #units-icon {
-background-color: #c2e7ff;
-border-radius: 6px;
+  background-color: #c2e7ff;
+  border-radius: 6px;
 }
 
-/* Pushes the "add" button to the bottom */
+/* Styles for the "Add" Section */
 .add-section {
-  margin-top:auto;
+  margin-top: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Styles for the Main Content */
 .main {
   margin-left: 150px;
   text-align: center;
   font-family: Inter;
 }
 
+/* Styles for the Header Section */
 .header {
-  height:100px;
-  width:100%;
+  height: 100px;
+  width: 100%;
   background-color: #c2e7ff;
   border-radius: 24px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 50px;
   font-weight: lighter;
 }
 
+/* Styles for the Content Container */
 .content {
-  height:100%;
-  width:100%;
-  display:flex;
+  height: 100%;
+  width: 100%;
+  display: flex;
   justify-content: center;
   flex-direction: row;
   margin-top: 50px;
   flex-wrap: wrap;
 }
 
+/* Styles for Cards in Content */
 .card {
   margin-bottom: 25px;
-  height:150px;
-  width:300px;
+  height: 150px;
+  width: 300px;
   background-color: #f3f6fc;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 24px;
@@ -76,10 +82,11 @@ border-radius: 6px;
   margin-right: 25px;
 }
 
+/* Styles for View Button in Cards */
 .view-button {
-  border:none;
-  outline:none;
-  width:30%;
+  border: none;
+  outline: none;
+  width: 30%;
   background-color: #004a77;
   color: #c2e7ff;
   font-size: 16px;
@@ -89,10 +96,12 @@ border-radius: 6px;
   font-weight: bolder;
 }
 
+/* Styles for Name in Cards */
 .name {
   font-size: 24px;
 }
 
+/* Styles for Delete Button in Cards */
 .delete-button {
   background-color: #c2e7ff;
   font-family: Inter;

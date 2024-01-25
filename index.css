@@ -1,3 +1,4 @@
+/* styling the sidebar */
 .sidebar {
     height: 100%;
     width: 150px;
@@ -12,6 +13,7 @@
     align-items: center;
 }
 
+/* styling the sidebar links */
 .sidebar a {
     font-family: Inter;
     font-size: 16px;
@@ -21,54 +23,58 @@
     padding-bottom: 50px;
 }
 
-/* Highlighting the Home icon */
+/* Highlighting the courses icon in the sidebar */
 #courses-icon {
-  background-color: #c2e7ff;
-  border-radius: 6px;
+    background-color: #c2e7ff;
+    border-radius: 6px;
 }
 
-/* Pushes the "add" button to the bottom */
+/* styling the "add" button, pushing it to the bottom */
 .add-section {
-    margin-top:auto;
+    margin-top: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* styling the main content area */
 .main {
     margin-left: 150px;
     text-align: center;
     font-family: Inter;
 }
 
+/* styling the header */
 .header {
-    height:100px;
-    width:100%;
+    height: 100px;
+    width: 100%;
     background-color: #c2e7ff;
     border-radius: 24px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 50px;
     font-weight: lighter;
 }
 
+/* styling the content container */
 .content {
-    height:100%;
-    width:100%;
-    display:flex;
+    height: 100%;
+    width: 100%;
+    display: flex;
     justify-content: center;
     flex-direction: row;
     margin-top: 50px;
     flex-wrap: wrap;
 }
 
+/* styling the individual cards */
 .card {
     margin-bottom: 25px;
-    height:150px;
-    width:300px;
+    height: 150px;
+    width: 300px;
     background-color: #f3f6fc;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 24px;
@@ -76,10 +82,11 @@
     margin-right: 25px;
 }
 
+/* styling the "View" button in the card */
 .view-button {
-    border:none;
-    outline:none;
-    width:30%;
+    border: none;
+    outline: none;
+    width: 30%;
     background-color: #004a77;
     color: #c2e7ff;
     font-size: 16px;
@@ -89,10 +96,12 @@
     font-weight: bolder;
 }
 
+/* styling the name in the card */
 .name {
     font-size: 24px;
 }
 
+/* styling the "Delete" button in the card */
 .delete-button {
     background-color: #c2e7ff;
     font-family: Inter;
