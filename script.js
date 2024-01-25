@@ -1,5 +1,5 @@
 function addCourse() {
-    event.preventDefault(); // Prevent the browser from refreshing when pressing the "Add" button
+    event.preventDefault(); //prevent the browser from refreshing when pressing the "Add" button
 
     //get classroom name from user
     var input = prompt("Please enter the name of the course:", "");
@@ -11,6 +11,7 @@ function addCourse() {
         
     }
     else {
+        //this is creating the actual "card" for the course to be displayed
         var card = document.createElement("div");
         var viewButton = document.createElement("button");
         viewButton.textContent = "View";
@@ -26,13 +27,13 @@ function addCourse() {
         card.appendChild(name);
         card.appendChild(viewButton);
 
-        var deleteButton = createDeleteButton(deleteCourse);
+        var deleteButton = createDeleteButton(deleteStudent);
         card.appendChild(deleteButton);
     }
 }
 
 function addStudent() {
-    event.preventDefault(); // Prevent the browser from refreshing when pressing the "Add" button
+    event.preventDefault(); //prevent the browser from refreshing when pressing the "Add" button
 
     var input = prompt("Please enter the name of the student:", "");
     if (input === '') {
@@ -42,6 +43,7 @@ function addStudent() {
         
     }
     else {
+        //creating card
         var card = document.createElement("div");
         var viewButton = document.createElement("button");
         viewButton.textContent = "View";
@@ -64,7 +66,7 @@ function addStudent() {
 }
 
 function addUnit() {
-    event.preventDefault(); // Prevent the browser from refreshing when pressing the "Add" button
+    event.preventDefault(); //prevent the browser from refreshing when pressing the "Add" button
 
     var input = prompt("Please enter the name of the unit:", "");
     if (input === '') {
@@ -74,6 +76,7 @@ function addUnit() {
         
     }
     else {
+        //creating card
         var card = document.createElement("div");
         var viewButton = document.createElement("button");
         viewButton.textContent = "View";
@@ -95,7 +98,7 @@ function addUnit() {
 }
 
 function addExpectation() {
-    event.preventDefault(); // Prevent the browser from refreshing when pressing the "Add" button
+    event.preventDefault(); //prevent the browser from refreshing when pressing the "Add" button
 
     var input = prompt("Please enter an expectation:", "");
     if (input === '') {
@@ -105,6 +108,7 @@ function addExpectation() {
         
     }
     else {
+        //expectation card that includes things such as checkboxes
         var card = document.createElement("div");
         var commentButton = document.createElement("button");
         var checkbox = document.createElement("input");
@@ -136,6 +140,7 @@ function addExpectation() {
         var deleteButton = createDeleteButton(deleteCourse);
         card.appendChild(deleteButton);
 
+        //lets you comment when pressed
         commentButton.onclick = function(event) {
             var clickedButton = event.target;
             var input = prompt("Please add a comment:", "");
@@ -165,7 +170,7 @@ function createDeleteButton(deleteFunction) { //the create delete button needs a
     return deleteButton;
 }
 
-function deleteCourse() {
+function deleteCourse() { //function that will actually delete the course
     var confirmation = confirm("Are you sure you want to delete this course?");
     if (confirmation) {
         var card = this.parentNode;
@@ -200,11 +205,10 @@ function deleteExpectation() {
 function fileUploaded() {
     //this function is mostly from from stack overflow
     var fileInput = document.getElementById('file-input');
-    var contentDiv = document.querySelector('.content');
 
     var file = fileInput.files[0];
 
-    if (file && file.name.endsWith('.csv')) {
+    if (file && file.name.endsWith('.csv')) { //getting specicically csv files
         var reader = new FileReader();
     
         reader.onload = function (e) {
@@ -219,19 +223,19 @@ function fileUploaded() {
 }
 
 function getCSVContent(csvContent) {
-    //parse CSV content into an array of rows
+    //split csv into rows
     var rows = csvContent.split('\n');
 
-    //extract course name from the file name (excluding the extension)
+    //get course name
     var fileName = document.getElementById('file-input').files[0].name;
     var courseName = fileName.replace('.csv', '');
 
-    //save course name in local storage
+    // Save course name in local storage
     saveCourseName(courseName);
 
-    //process each row of the CSV
+    // process each row of the CSV
     rows.forEach(row => {
-        //split the row into columns
+        // split the row into columns
         var columns = row.split(',');
 
         // check if there are at least two columns (first name and last name)
@@ -239,52 +243,43 @@ function getCSVContent(csvContent) {
             var firstName = columns[0].trim();
             var lastName = columns[1].trim();
 
-            // Save student in local storage
+            // Save student in local storage for the specified course
             saveStudent(courseName, firstName, lastName);
         }
     });
+
+    // Load after processed
+    if (window.location.href.includes('courses.html')) {
+        loadCourses();
+    }
+    else if (window.location.href.includes('courses.html')) {
+        loadStudents(); //this is not working for some reason
+    }
 }
 
 function saveCourseName(courseName) {
-    // retrieve existing courses names from local storage
+    //get existing courses names from local storage
     var existingCourses = JSON.parse(localStorage.getItem('courses')) || [];
 
-    // add the new course name
+    //add the new course name
     existingCourses.push(courseName);
 
-    // save the updated course names back to local storage
+    //save the updated course names back to local storage
     localStorage.setItem('courses', JSON.stringify(existingCourses));
 }
 
 function saveStudent(courseName, firstName, lastName) {
-    // Retrieve existing students for the course from local storage
+    //get existing students for the course from local storage
     var existingStudents = JSON.parse(localStorage.getItem(courseName)) || [];
 
-    // Add the new student
+    //add the new student
     existingStudents.push({ firstName, lastName });
 
-    // Save the updated students back to local storage
+    //save the updated students back to local storage
     localStorage.setItem(courseName, JSON.stringify(existingStudents));
 }
 
-function loadCourses() {
-    //retrieve existing course names from local storage
-    var existingCourses = JSON.parse(localStorage.getItem('courses')) || [];
-
-    //get the content container
-    var content = document.querySelector(".content");
-
-    //clear the existing content
-    content.innerHTML = '';
-
-    //iterate through existing courses and add them to the content
-    existingCourses.forEach(courseName => {
-        // Create the course visually
-        createCourse(courseName);
-    });
-}
-
-//new function to create a course visually
+// New function to create a course visually
 function createCourse(courseName) {
     var card = document.createElement("div");
     var viewButton = document.createElement("button");
@@ -307,23 +302,23 @@ function createCourse(courseName) {
 }
 
 function loadCourses() {
-    //retrieve existing course names from local storage
+    // get existing course names from local storage
     var existingCourses = JSON.parse(localStorage.getItem('courses')) || [];
 
-    // Get the content container
+    // get the content container
     var content = document.querySelector(".content");
 
-    //clear the existing content
+    // clear the existing content
     content.innerHTML = '';
 
-    //iterate through existing courses and add them to the content
+    // go through every existing courses and add them to the content
     existingCourses.forEach(courseName => {
-        // Create the course visually
+        // create the course visually
         createCourse(courseName);
     });
 }
 
-//new function to create a course visually
+// New function to create a course visually
 function createCourse(courseName) {
     var card = document.createElement("div");
     var viewButton = document.createElement("button");
@@ -341,12 +336,55 @@ function createCourse(courseName) {
     var deleteButton = createDeleteButton(deleteCourse);
     card.appendChild(deleteButton);
 
-    //append the card to the content container
+    // Append the card to the content container
+    document.querySelector(".content").appendChild(card);
+}
+
+function loadStudents() {
+    // get the selected course name from local storage
+    var selectedCourse = localStorage.getItem('selectedCourse');
+
+    // get existing students for the selected course from local storage
+    var existingStudents = JSON.parse(localStorage.getItem(selectedCourse)) || [];
+
+    // get the content container
+    var content = document.querySelector(".content");
+
+    // clear the existing content
+    content.innerHTML = '';
+
+    // go through every existing students and add them to the content
+    existingStudents.forEach(student => {
+        // Create the student visually
+        createStudent(student.firstName, student.lastName);
+    });
+}
+
+
+// New function to create a student visually
+function createStudent(firstName, lastName) {
+    var card = document.createElement("div");
+    var viewButton = document.createElement("button");
+    viewButton.textContent = "View";
+    var name = document.createElement("h3");
+    name.textContent = `${firstName} ${lastName}`;
+
+    card.className = "card";
+    viewButton.className = "view-button";
+    name.className = "name";
+
+    card.appendChild(name);
+    card.appendChild(viewButton);
+
+    var deleteButton = createDeleteButton(deleteStudent);
+    card.appendChild(deleteButton);
+
+    // Append the card to the content container
     document.querySelector(".content").appendChild(card);
 }
 
 function clearLocalStorage() {
-    // clear all local storage
+    // Clear all local storage
     localStorage.clear();
 
     // Clear the content on the page
@@ -354,3 +392,4 @@ function clearLocalStorage() {
     content.innerHTML = '';
     alert("Local storage cleared successfully.");
 }
+
