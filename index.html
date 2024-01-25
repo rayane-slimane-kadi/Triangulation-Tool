@@ -8,15 +8,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!-- script for CSV api -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.11/jquery.csv.min.js"></script>
     <script src="script.js"></script>
-    <script>
-    // whenever page is openened it is made up to date
-    window.onload = function() {
-        loadCourses();
-      };
-    </script>
 </head>
 
 <body>
@@ -31,23 +23,10 @@
         <a id="units-label" href="units.html">Units</a>
         <span class="material-symbols-outlined" id="expectations-icon">done</span>
         <a id="expectations-label" href="expectations.html">Expectations</a>
-       
-        <span class="material-symbols-outlined" id="upload-icon">cloud_upload</span>
-        <label for="file-input" id="upload-label">Upload CSV</label>
-        <input type="file" id="file-input" style="display: none;" onchange="fileUploaded()">
-    
-        <span class="material-symbols-outlined" id="update-icon">refresh</span>
-        <a id="update-label" href="" onclick="loadCourses()">Update courses</a>
-
-        <button onclick="clearLocalStorage()">delete local storage</button>
-
+        
         <div class="add-section">
             <span class="material-symbols-outlined" id="add-icon">add</span>
             <a id="add-label" href="" onclick="addCourse()">Add</a>
-            <span class="material-symbols-outlined" id="delete-icon">delete</span>
-            <a id="delete-label" href="" onclick="deleteCourse()">Delete</a>
-            
-            
         </div>
     </div>
 
